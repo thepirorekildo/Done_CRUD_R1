@@ -1,4 +1,3 @@
-package Practice_CRUD;
 
 public class Employee {
       int id;

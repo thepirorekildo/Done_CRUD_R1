@@ -1,10 +1,17 @@
 import java.sql.*;
 public class DB {
 
-      public Connection connect(){
-
+      public static Connection connect(){
+            Connection conn = null;
             try{
-                  Class.forName("null")
+                  Class.forName("com.mysql.cj.jdbc.Driver");
+                  String url = "jdbc:mysql://localhost:3306/rek";
+                  String user = "root";
+                  String pass = "rekildo3012";
+                  conn = DriverManager.getConnection(url, user,pass);
+            }catch(Exception e){
+                  System.out.println(e);
             }
+            return conn;
       }      
 }
